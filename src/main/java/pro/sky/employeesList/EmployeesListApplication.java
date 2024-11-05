@@ -9,7 +9,4 @@ public class EmployeesListApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EmployeesListApplication.class, args);
 	}
-
-
-
 }
