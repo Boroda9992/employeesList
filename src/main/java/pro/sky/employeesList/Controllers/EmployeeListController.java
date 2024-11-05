@@ -23,8 +23,6 @@ public class EmployeeListController {
     }
 
 
-
-
     @GetMapping("add")
     public Employee addEmployee(@RequestParam String firstName, @RequestParam String lastName) throws EmployeeStorageIsFullException, EmployeeAlreadyAddedException {
         return employeeService.addEmployee(firstName, lastName);
@@ -41,8 +39,8 @@ public class EmployeeListController {
         return employeeService.findEmployee(firstName, lastName);
     }
 
-    @GetMapping
-    public Collection<Employee> listEmployees() {
-        return employeeService.listEmployees();
+    @GetMapping("findAll")
+    public Collection<Employee> findAll() {
+        return employeeService.findAll();
     }
 }

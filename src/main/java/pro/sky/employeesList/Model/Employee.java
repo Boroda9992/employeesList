@@ -42,4 +42,8 @@ public class Employee {
     public String getLAST_NAME() {
         return LAST_NAME;
     }
+
+    public String getFullName() {
+        return FIRST_NAME + " " + LAST_NAME;
+    }
 }
