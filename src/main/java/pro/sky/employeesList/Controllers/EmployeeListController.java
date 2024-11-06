@@ -24,22 +24,22 @@ public class EmployeeListController {
 
 
     @GetMapping("add")
-    public Employee addEmployee(@RequestParam String firstName, @RequestParam String lastName) throws EmployeeStorageIsFullException, EmployeeAlreadyAddedException {
-        return employeeService.addEmployee(firstName, lastName);
+    public Employee addEmployee(@RequestParam String firstName, @RequestParam String lastName,@RequestParam int salary, @RequestParam int department) throws EmployeeStorageIsFullException, EmployeeAlreadyAddedException {
+        return employeeService.addEmployee(firstName, lastName, salary, department);
     }
 
 
     @GetMapping("remove")
-    public Employee deleteEmployee(@RequestParam String firstName, @RequestParam String lastName) throws EmployeeNotFoundException {
-        return employeeService.deleteEmployee(firstName, lastName);
+    public Employee deleteEmployee(@RequestParam String firstName, @RequestParam String lastName,@RequestParam int salary, @RequestParam int department) throws EmployeeNotFoundException {
+        return employeeService.deleteEmployee(firstName, lastName, salary, department);
     }
 
     @GetMapping("find")
-    public Employee findEmployee(@RequestParam String firstName, @RequestParam String lastName) throws EmployeeNotFoundException {
-        return employeeService.findEmployee(firstName, lastName);
+    public Employee findEmployee(@RequestParam String firstName, @RequestParam String lastName,@RequestParam int salary, @RequestParam int department) throws EmployeeNotFoundException {
+        return employeeService.findEmployee(firstName, lastName, salary, department);
     }
 
-    @GetMapping("findAll")
+    @GetMapping
     public Collection<Employee> findAll() {
         return employeeService.findAll();
     }
