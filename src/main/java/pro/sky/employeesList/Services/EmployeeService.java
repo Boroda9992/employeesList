@@ -7,11 +7,14 @@ import java.util.Collection;
 
 @Service
 public interface EmployeeService {
-    Employee addEmployee(String firstName, String lastName);
+    Employee addEmployee(String firstName, String lastName, int salary, int department);
 
-    Employee deleteEmployee(String firstName, String lastName);
 
-    Employee findEmployee(String firstName, String lastName);
+    Employee deleteEmployee(String firstName, String lastName, int salary, int department);
+
+    Employee findEmployee(String firstName, String lastName, int salary, int department);
+
+
 
     Collection<Employee> findAll();
 
