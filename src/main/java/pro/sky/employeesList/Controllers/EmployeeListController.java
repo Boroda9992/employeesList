@@ -1,9 +1,11 @@
 package pro.sky.employeesList.Controllers;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import pro.sky.employeesList.Exceptions.IllegalNameFormat;
 import pro.sky.employeesList.Model.Employee;
 import pro.sky.employeesList.Exceptions.EmployeeAlreadyAddedException;
 import pro.sky.employeesList.Exceptions.EmployeeNotFoundException;
@@ -24,7 +26,10 @@ public class EmployeeListController {
 
 
     @GetMapping("add")
-    public Employee addEmployee(@RequestParam String firstName, @RequestParam String lastName,@RequestParam int salary, @RequestParam int department) throws EmployeeStorageIsFullException, EmployeeAlreadyAddedException {
+    public Employee addEmployee(@RequestParam String firstName,
+                                @RequestParam String lastName,
+                                @RequestParam int salary,
+                                @RequestParam int department) throws EmployeeStorageIsFullException, EmployeeAlreadyAddedException, IllegalNameFormat {
         return employeeService.addEmployee(firstName, lastName, salary, department);
     }
 

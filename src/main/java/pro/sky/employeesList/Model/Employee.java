@@ -1,6 +1,8 @@
 package pro.sky.employeesList.Model;
 
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.Objects;
 
 public class Employee {
@@ -12,8 +14,8 @@ public class Employee {
     private final int department;
 
     public Employee(String firstName, String lastName, int salary, int department) {
-        FIRST_NAME = firstName;
-        LAST_NAME = lastName;
+        FIRST_NAME = StringUtils.capitalize(firstName);
+        LAST_NAME = StringUtils.capitalize(lastName);
         this.salary = salary;
         this.department = department;
     }
