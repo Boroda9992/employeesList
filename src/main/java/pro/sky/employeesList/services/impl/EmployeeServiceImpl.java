@@ -1,17 +1,17 @@
-package pro.sky.employeesList.Services.Impl;
+package pro.sky.employeesList.services.impl;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
-import pro.sky.employeesList.Model.Employee;
-import pro.sky.employeesList.Exceptions.EmployeeAlreadyAddedException;
-import pro.sky.employeesList.Exceptions.EmployeeNotFoundException;
+import pro.sky.employeesList.model.Employee;
+import pro.sky.employeesList.exceptions.EmployeeAlreadyAddedException;
+import pro.sky.employeesList.exceptions.EmployeeNotFoundException;
 
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
 
 @Service
-public class EmployeeServiceImpl implements pro.sky.employeesList.Services.EmployeeService {
+public class EmployeeServiceImpl implements pro.sky.employeesList.services.EmployeeService {
 
     private final Map<String, Employee> employeeMap;
 

@@ -1,14 +1,14 @@
-package pro.sky.employeesList.Controllers;
+package pro.sky.employeesList.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import pro.sky.employeesList.Model.Employee;
-import pro.sky.employeesList.Exceptions.EmployeeAlreadyAddedException;
-import pro.sky.employeesList.Exceptions.EmployeeNotFoundException;
-import pro.sky.employeesList.Exceptions.EmployeeStorageIsFullException;
-import pro.sky.employeesList.Services.EmployeeService;
+import pro.sky.employeesList.model.Employee;
+import pro.sky.employeesList.exceptions.EmployeeAlreadyAddedException;
+import pro.sky.employeesList.exceptions.EmployeeNotFoundException;
+import pro.sky.employeesList.exceptions.EmployeeStorageIsFullException;
+import pro.sky.employeesList.services.EmployeeService;
 
 import java.util.Collection;
 

@@ -1,7 +1,7 @@
-package pro.sky.employeesList.Services;
+package pro.sky.employeesList.services;
 
 import org.springframework.stereotype.Service;
-import pro.sky.employeesList.Model.Employee;
+import pro.sky.employeesList.model.Employee;
 
 import java.util.Collection;
 
